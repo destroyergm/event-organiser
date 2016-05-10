@@ -2,5 +2,9 @@
 	<h1>Event creator: <%= @event.creator.name %></h1>
 </div>
 <h2>Guests List</h2>
-
+<ol>
+<% @guests.each do |guest| %>
+	<li><%= guest.name %></li>
+<% end %>
+</ol>
 <%= link_to "Back to index", root_url %>

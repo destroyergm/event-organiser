@@ -1,13 +1,35 @@
-<div id="user_header">
+<div class="user_header">
 	<h1> - <%= @user.name %> home page - </h1>
 	<h2>Event list</h2>
 </div>
-<div id="events">
+<div class="events">
 <ul>
 	<% @events.each do |event| %>
 		<li><%= event.place %> | <%= event.date %> | <%= link_to "Show", event_path(event) %></li>
 	<% end %>
 </ul>
+</div>
+<div class="user_header">
+	<h2>Events that are about to happen</h2>
+<div class="events">
+	<ul>
+	<% @upcoming_events.each do |event| %>
+		<li><%= event.place %> | <%= event.date %> 
+		| <%= event.creator.name %>'s event | <%= link_to "Show", event_path(event) %></li>
+	<% end %>
+	</ul>
+</div>
+</div>
+<div class="user_header">
+	<h2>Events that happaned in the past</h2>
+	<div class="events">
+	<ul>
+		<% @passed_events.each do |event| %>
+			<li><%= event.place %> | <%= event.date %>
+			| <%= event.creator.name %>'s event | <%= link_to "Show", event_path(event) %></li>
+		<% end %>
+	</ul>
+	</div>
 </div>
 <div class="links">
 	<%= link_to "Create new event", new_event_path %> |
