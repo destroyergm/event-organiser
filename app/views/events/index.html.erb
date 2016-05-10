@@ -1,0 +1,9 @@
+<div id="user_header">
+	<h1>List of all events</h1>
+</div>
+
+<ul>
+<% @events.each do |event| %>
+	<li><%= event.place %> | <%= event.date %> By <%= event.creator.name %></li>
+<% end %>
+</ul>
