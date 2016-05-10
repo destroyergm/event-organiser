@@ -1,10 +1,21 @@
-<div id="user_header">
-	<h1>List of all events</h1>
+<div class="user_header">
+	<h1>List of all upcoming events</h1>
+<div class="events">
+		<ul>
+			<% @upcoming.each do |event| %>
+				<li><%= event.place %> | <%= event.date %> By <%= event.creator.name %> | <%= link_to "Show", event_path(event) %></li>
+			<% end %>
+		</ul>
+	</div>
 </div>
-
-<ul>
-<% @events.each do |event| %>
-	<li><%= event.place %> | <%= event.date %> By <%= event.creator.name %> | <%= link_to "Show", event_path(event) %></li>
-<% end %>
-</ul>
+<div class="user_header">
+	<h1>List of all passed events</h1>
+<div class="events">
+		<ul>
+			<% @passed.each do |event| %>
+				<li><%= event.place %> | <%= event.date %> By <%= event.creator.name %> | <%= link_to "Show", event_path(event) %></li>
+			<% end %>
+		</ul>
+	</div>
+</div>
 <%= link_to "Back to Index", root_url %>
