@@ -5,7 +5,7 @@
 <div id="events">
 <ul>
 	<% @events.each do |event| %>
-		<li><%= event.place %> | <%= event.date %></li>
+		<li><%= event.place %> | <%= event.date %> | <%= link_to "Show", event_path(event) %></li>
 	<% end %>
 </ul>
 </div>
