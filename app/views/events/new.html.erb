@@ -1,0 +1,12 @@
+<div id="user_header">
+	<h1>Create new event form </h1>
+</div>
+<%= form_for(@event) do |f| %>
+		<%= f.label :place %>
+		<%= f.text_field :place %>
+
+		<%= f.label :date %>
+		<%= f.date_field :date %>
+
+		<%= f.submit "Create Event" %>
+	<% end %>
