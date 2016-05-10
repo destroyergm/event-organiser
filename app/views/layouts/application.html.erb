@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EventOrganiser</title>
+  <title>Event Organiser</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id='header'>
+	<h1>Welcome to Event Organiser</h1>
+	<h2>By Stefan (Destroyergm)</h2>
+</div>
+
+<% flash.each do |type, message | %>
+	<div class="alert alert-<%= type %>"><%= message %></div>
+<% end %>
+
+<div id="content" >
+	<%= yield %>
+</div>
+
+<div id='footer'>
+	<h2>Curently logged in as: <%= active_user_or("no-one") %></h2>
+</div>
 
 </body>
 </html>

@@ -1,0 +1,33 @@
+/* Flash notice for creating user */
+.alert {
+	padding: 15px;
+	width: 100px;
+	margin: 0 auto;
+	&.alert-success {
+		background-color: lime;
+		color: green;
+		border: 1px solid green;
+	}
+	&.alert-danger {
+		background-color: #ffcccc;
+		color: red;
+		border: 1px solid red;
+	}
+}
+
+/* Site header */
+#header {
+	h1 {
+		text-align: center;
+	}
+	h2 {
+		text-align: center;
+	}
+}
+
+/* Site footer */
+#footer {
+	h2 {
+		text-align: center;
+	}
+}
