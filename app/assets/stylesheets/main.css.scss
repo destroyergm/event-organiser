@@ -16,7 +16,11 @@
 }
 
 /* Site header */
-#header {
+#header {	
+	background-color: #e6e6e6;
+	border: 2px solid black;
+	font-family: cursive;
+	border-radius: 15px;
 	h1 {
 		text-align: center;
 	}
